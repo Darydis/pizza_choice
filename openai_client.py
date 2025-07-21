@@ -26,8 +26,8 @@ async def ask_chatgpt(image_bytes):
     data_url = f"data:image/jpeg;base64,{b64}"
 
     prompt = (
-        "Распознай на изображении меню названия пицц. "
-        "Верни JSON-массив объектов {name: str}."
+        "Распознай на изображении список чего-либо. "
+        "Верни JSON-массив объектов {name: str} без заголовка или другой информации, не относящейся к списку."
     )
     messages = [
         {"role": "system", "content": prompt},
